@@ -2,8 +2,8 @@ import { Link, Outlet } from "react-router";
 
 const Layout = () => {
   return (
-    <div>
-      <nav>
+    <div className="app-shell">
+      <nav className="site-nav">
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -17,7 +17,7 @@ const Layout = () => {
         </ul>
       </nav>
 
-      <main>
+      <main className="page-content">
         <Outlet />
       </main>
     </div>

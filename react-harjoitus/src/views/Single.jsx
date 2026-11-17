@@ -13,6 +13,7 @@ const Single = () => {
   return (
     <div className="single-view">
       <h2>{item.title}</h2>
+      <p>Uploaded by: {item.username}</p>
       <p>{item.description}</p>
 
       {item.media_type.startsWith("image/") ? (

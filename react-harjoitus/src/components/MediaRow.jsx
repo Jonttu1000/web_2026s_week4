@@ -8,6 +8,7 @@ const MediaRow = (props) => {
       <td>
         <img src={item.thumbnail} alt={item.title} />
       </td>
+      <td>{item.username}</td>
       <td>{item.description}</td>
       <td>{item.created_at}</td>
       <td>{item.filesize}</td>
