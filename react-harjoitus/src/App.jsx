@@ -5,6 +5,8 @@ import Home from './views/Home.jsx';
 import Profile from './views/Profile.jsx';
 import Upload from './views/Upload.jsx';
 import Single from './views/Single.jsx';
+import Login from './views/Login.jsx';
+import Logout from './views/Logout.jsx';
 import "./App.css";
 
 const App = () => {
@@ -16,6 +18,8 @@ const App = () => {
           <Route path="/profile" element={<Profile/>}/>
           <Route path="/upload" element={<Upload/>}/>
           <Route path="/single" element={<Single/>}/>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/logout" element={<Logout/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
