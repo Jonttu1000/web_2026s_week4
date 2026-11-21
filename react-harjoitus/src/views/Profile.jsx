@@ -32,9 +32,9 @@ const Profile = () => {
   }
   return (
     <div>
-        <h1>Profile Info</h1>
-        <p>Username: {user.username}</p>
-        <p>Email: {user.email}</p>
+      <h1>Profile Info</h1>
+      <p>Username: {user.username}</p>
+      <p>Email: {user.email}</p>
     </div>
   );
 };

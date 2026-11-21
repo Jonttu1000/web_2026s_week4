@@ -1,8 +1,10 @@
 import { useUser } from "../hooks/apiHooks.js";
 import useForm from "../hooks/formHooks.js";
+import { useNavigate } from "react-router";
 
 const RegisterForm = () => {
   const { postUser } = useUser();
+  const navigate = useNavigate();
 
   const initValues = {
     username: "",
@@ -17,8 +19,14 @@ const RegisterForm = () => {
         email: inputs.email,
       });
       const result = await postUser(inputs);
+
+      if (!result.error) {
+        window.alert("Registration successful! You can now log in.");
+      }
+
       console.log("Registeration result: ", result);
     } catch (error) {
+      window.alert("Registration failed: " + error.message);
       console.error("Failed to register a new user.", error);
     }
   };
