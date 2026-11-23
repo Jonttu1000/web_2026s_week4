@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
 import useForm from "../hooks/formHooks";
 import { useFile } from "../hooks/apiHooks.js";
 
 const Upload = () => {
   const [file, setFile] = useState(null);
   const { postFile, postMedia } = useFile();
+  const navigate = useNavigate();
 
   const initValues = {
     title: "",
@@ -21,14 +23,16 @@ const Upload = () => {
 
   const doUpload = async (formData) => {
     try {
-      console.log("Uploading file:", file);
-      console.log("Form data:", formData);
       // TODO: call postFile function (see below)
-      postFile(file, localStorage.getItem("token"));
+      const fileData = await postFile(file, localStorage.getItem("token"));
+        
+      console.log("File uploaded successfully:", fileData);
+
       // TODO: call postMedia function (see below)
-      postMedia(file, formData, localStorage.getItem("token"));
+      const mediaResponse = await postMedia(fileData.data, formData, localStorage.getItem("token"));
       // TODO: redirect to Home
-      //navigate("/");
+      console.log('Media Response: ', mediaResponse);
+      navigate("/");
     } catch (e) {
       console.log(e.message);
     }
