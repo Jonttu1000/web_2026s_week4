@@ -20,3 +20,11 @@ Open [the React Hooks exercise](https://users.metropolia.fi/~jonatago/hooks/) to
 ### Custom Hooks
 
 [Published application](https://users.metropolia.fi/~jonatago/custom-hooks/)
+
+## Forms
+
+Implemented login and registration forms using a reusable
+useForm custom hook, API authentication, token storage
+and user profile functionality.
+
+[Forms application](https://users.metropolia.fi/~jonatago/forms/)
