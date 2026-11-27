@@ -20,3 +20,10 @@ Open [the React Hooks exercise](https://users.metropolia.fi/~jonatago/hooks/) to
 ### Custom Hooks
 
 [Published application](https://users.metropolia.fi/~jonatago/custom-hooks/)
+
+
+## Shared State (Context)
+
+
+[Context](https://users.metropolia.fi/~jonatago/context/)
+
