@@ -38,3 +38,9 @@ Implemented login and registration forms using custom hooks, API authentication,
 Implemented shared authentication state with React Context, automatic login, conditional navigation and protected routes.
 
 [Published application](https://users.metropolia.fi/~jonatago/context/)
+
+### 4. File Upload
+
+Implemented authenticated image and video uploads using FormData, custom API hooks, file previews and Media API integration.
+
+[Published application](https://users.metropolia.fi/~jonatago/upload/)
