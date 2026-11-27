@@ -17,14 +17,24 @@ Open [the React Routing exercise](https://users.metropolia.fi/~jonatago/wsk-rout
 
 Open [the React Hooks exercise](https://users.metropolia.fi/~jonatago/hooks/) to view it in the browser.
 
-### Custom Hooks
+
+# Web Programming – React
+
+React exercises completed during the Web Programming course at Metropolia University of Applied Sciences.
+
+## Week 5
+
+### 1. Custom Hooks
+Refactored API fetching logic into reusable custom hooks to separate data handling from UI components.
 
 [Published application](https://users.metropolia.fi/~jonatago/custom-hooks/)
 
-## Forms
+### 2. Forms in React
+Implemented login and registration forms using custom hooks, API authentication, token storage and user profiles.
 
-Implemented login and registration forms using a reusable
-useForm custom hook, API authentication, token storage
-and user profile functionality.
+[Published application](https://users.metropolia.fi/~jonatago/forms/)
 
-[Forms application](https://users.metropolia.fi/~jonatago/forms/)
+### 3. Shared State (Context)
+Implemented shared authentication state with React Context, automatic login, conditional navigation and protected routes.
+
+[Published application](https://users.metropolia.fi/~jonatago/context/)
