@@ -1,10 +1,8 @@
 import useForm from "../hooks/formHooks.js";
-import { useAuthentication } from "../hooks/apiHooks.js";
-import { useNavigate } from "react-router";
+import { useUserContext } from "../hooks/contextHooks.js";
 
 const LoginForm = () => {
-  const navigate = useNavigate();
-  const { postLogin } = useAuthentication();
+  const { handleLogin } = useUserContext();
 
   const initValues = {
     username: "",
@@ -13,20 +11,8 @@ const LoginForm = () => {
 
   const doLogin = async () => {
     try {
-      console.log("Submitting login:", {
-        username: inputs.username,
-        email: inputs.email,
-      });
-      const result = await postLogin(inputs);
+        await handleLogin(inputs),
       console.log(result);
-
-      if (!result.token) {
-        throw new Error("Login response didnt contai a token.");
-      }
-
-      localStorage.setItem("token", result.token);
-      //Login onnistunut, siirrytään etusivulle.
-      navigate("/");
     } catch (error) {
       console.error("Login failed: ", error);
     }
